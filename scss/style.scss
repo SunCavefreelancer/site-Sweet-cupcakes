@@ -1,0 +1,1028 @@
+@use "sass:math";
+
+// Підключення шрифтів
+@import "_fonts.scss";
+
+// Скидання стилів
+@import "_reset.scss";
+
+// Функції
+@import "_function.scss";
+
+// Компоненти, сторінки
+@import "header.css";
+
+// Компоненти, сторінки
+@import "_mycompany.scss";
+
+// Компоненти, сторінки
+@import "_work.scss";
+
+// Компоненти, сторінки
+@import "_contakti.scss";
+
+// Компоненти, сторінки
+@import "Cruassant.css";
+
+// Компоненти, сторінки
+@import "_torts.scss";
+
+
+// Компоненти, сторінки
+//@import "_footer.scss";
+
+// Компоненти, сторінки
+@import "_zefir.scss";
+
+
+// Компоненти, сторінки
+@import "_bread.scss";
+
+// Компоненти, сторінки
+@import "_contakti-page.scss";
+
+// Компоненти, сторінки
+@import "_anime.scss";
+
+
+// Компоненти, сторінки
+@import "_materials.scss";
+
+
+// Компоненти, сторінки
+@import "_money.scss";
+
+
+// Компоненти, сторінки
+@import "_footer.scss";
+
+
+
+
+
+body {
+	font-family: "Inter";
+	background-color: #faf5f5;
+}
+
+
+
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+	
+
+	display: flex;			//прижимаем футер книзу
+	flex-direction: column; //прижимаем футер книзу
+}
+.wrapper main {
+	flex-grow: 1;			//прижимаем футер книзу
+}
+
+
+// для усіх "__container" однаково
+[class*="__container"] {
+	max-width: toRem(1280);/* 1250 + 15 + 15 */
+	margin: 0 auto;
+	padding-left: toRem(15);
+	padding-right: toRem(15);
+}
+
+
+
+
+//-------------SCSS основні стилі ---------------------------
+
+//--------------------section 1 ---------------------------------
+.center {
+	background-image: url(../img/001.webp);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;				//зафиксировали фон
+
+	padding: toRem(160) toRem(0) toRem(80);
+		display: flex;				//для всієї СЕКЦІЇ блок по центру
+		flex-direction: column;		//для всієї СЕКЦІЇ блок по центру
+		justify-content: center;	//для всієї СЕКЦІЇ блок по центру
+		align-items: center;
+		@media(max-width: toEm(992)) {
+			padding: toRem(120) toRem(0) toRem(80);
+		}
+		@media(max-width: toEm(767)) {
+			padding: toRem(80) toRem(0) toRem(80);
+		}
+		@media(max-width: toEm(730)) {
+			padding: toRem(70) toRem(0) toRem(20);
+		}
+
+
+	&__text {
+		align-items: center;
+		border: toRem(1) solid rgb(145, 118, 233);
+		padding: toRem(30) toRem(10);
+		text-align: center;
+
+//еффект матового стекла
+		padding: toRem(30);
+		background: rgba(255, 255, 255, 0.36);
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(2.4px);
+		-webkit-backdrop-filter: blur(2.4px);
+		border: 1px solid rgba(255, 255, 255, 0.96);
+
+		& > *:last-child {
+			margin-bottom: toEm(0);
+		}
+
+	}
+	& h2 {		//цукерочка
+		font-size: toRem(35);
+		margin-bottom: toEm(30, 35);
+		font-weight: 600;
+		font-family: 'BauhausMediumC';
+		line-height: 130%;
+		color: #d84bf4;
+		animation: tracking-in-contract 0.8s 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+		@media(max-width: toEm(700)) {
+			font-size: toRem(25);
+			line-height: 120%;
+		}
+	}
+		& h3 {
+			font-size: toRem(80);
+			margin-bottom: toEm(20, 80);
+			font-weight: 500;
+			font-family: 'BauhausMediumC';
+			letter-spacing: toRem(5);
+			line-height: 150%;
+			animation: slide-in-right 0.8s 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+			@media(max-width: toEm(992)) {
+				font-size: toRem(65);
+			}
+			@media(max-width: toEm(767.99)) {
+				font-size: toRem(45);
+			}
+			@media(max-width: toEm(700)) {
+				font-size: toRem(40);
+			}
+			@media(max-width: toEm(530)) {
+				font-size: toRem(35);
+			}
+			@media(max-width: toEm(450)) {
+				font-size: toRem(30);
+				line-height: 135%;
+			}
+			@media(max-width: toEm(400)) {
+				font-size: toRem(25);
+				line-height: 135%;
+			}
+		}
+		& h4 {
+			font-size: toRem(25);
+			margin-bottom: toEm(45, 25);
+			font-weight: 500;
+			font-family: 'BauhausMediumC';
+			letter-spacing: toRem(2);		
+			line-height: 165%;	
+			animation: slide-in-right 0.8s 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+			@media(max-width: toEm(560)) {
+				font-size: toRem(20);
+				line-height: 145%;	
+			}
+			@media(max-width: toEm(440)) {
+				font-size: toRem(18);
+				line-height: 130%;	
+			}
+		}
+	// .center__button
+	&__button {
+		padding: toRem(10) toRem(45);
+		border: toRem(1) solid rgb(0, 255, 0);
+		font-size: toRem(20);
+		display: inline-block;
+		background-color: #22f5ea;
+		transition: 0.5s;
+		animation: slide-in-right 0.8s 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+		&:hover {
+			background-color: transparent;
+			color: #ffffff;
+			border: toRem(1) solid rgb(0, 255, 0);
+			border: toRem(1) solid #22f5ea;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(1.001);
+				}
+			}
+		}
+	
+}
+
+
+
+
+
+//--------------------sectiion 2------------------------------------------
+.number {
+	position: relative;
+	z-index: 2;
+height: 60svh;
+@media(max-width: toEm(1870)) {
+	height: 80vh;
+}
+@media(max-width: toEm(1270)) {
+	height: 70svh;
+}
+@media(max-width: toEm(992)) {
+	height: 60svh;
+}
+@media(max-width: toEm(500)) {
+	height: 50svh;
+}
+	padding: toRem(80) toRem(20) toRem(50);
+	@media(max-width: toEm(767)) {
+		padding: toRem(50) toRem(20) toRem(30);
+	}
+	@media(max-width: toEm(400)) {
+		padding: toRem(20) toRem(20) toRem(0);
+	}
+
+
+	&__container {
+		text-align: center;		
+		padding: toRem(0) toRem(20) toRem(0);
+		@media(max-width: toEm(540)) {
+			padding: toRem(0) toRem(20) toRem(25);
+		}
+	}
+
+	// .number__title
+	&__title {
+		text-shadow: toRem(4) toRem(4) toRem(10) rgba(1, 1, 1, 0.5);
+		z-index: 2;		//вытащили текст наверх картинки
+		position: relative;
+		font-size: toRem(220);
+		padding: toRem(20);
+		font-weight: 800;
+		color: #22f5ea;
+		letter-spacing: toRem(15);
+		font-family: 'BauhausMediumC';
+		@media(max-width: toEm(1300)) {
+			font-size: toRem(180);
+		}
+		@media(max-width: toEm(1055)) {
+			font-size: toRem(130);
+		}
+		@media(max-width: toEm(955)) {
+			font-size: toRem(100);
+		}
+		@media(max-width: toEm(767)) {
+			font-size: toRem(80);
+			text-align: left;
+		}
+		@media(max-width: toEm(480)) {
+			font-size: toRem(60);
+		}
+		@media(max-width: toEm(435)) {
+			font-size: toRem(50);
+			letter-spacing: toRem(10);
+		}
+		@media(max-width: toEm(390)) {
+			font-size: toRem(40);
+			letter-spacing: toRem(8);
+		}
+		@media(max-width: toEm(360)) {
+			font-size: toRem(35);
+			letter-spacing: toRem(8);
+		}
+		@media(max-width: toEm(340)) {
+			font-size: toRem(30);
+			letter-spacing: toRem(8);
+		}
+		
+		& span {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: toRem(100);
+			left: toRem(350);
+			font-size: toRem(35);
+			color: #0b0a0a;
+			font-family: 'BauhausMediumC';
+			@media(max-width: toEm(1155)) {
+				top: toRem(100);
+				left: toRem(300);
+			}
+			@media(max-width: toEm(1055)) {
+				top: toRem(80);
+				left: toRem(250);
+			}
+			@media(max-width: toEm(955)) {
+				top: toRem(60);
+				left: toRem(200);
+				font-size: toRem(20);
+			}
+			@media(max-width: toEm(767)) {
+				top: toRem(50);
+				left: toRem(150);
+			}
+			@media(max-width: toEm(655)) {
+				left: toRem(250);
+				letter-spacing: toRem(10);
+			}
+			@media(max-width: toEm(575)) {
+				left: toRem(170);
+				letter-spacing: toRem(10);
+			}
+			@media(max-width: toEm(492)) {
+				top: toRem(43);
+				left: toRem(160);
+				letter-spacing: toRem(9);
+			}
+			@media(max-width: toEm(470)) {
+				top: toRem(40);
+				left: toRem(140);
+				letter-spacing: toRem(9);
+			}
+			@media(max-width: toEm(445)) {
+				top: toRem(35);
+				letter-spacing: toRem(8);
+			}
+			@media(max-width: toEm(430)) {
+				top: toRem(35);
+				left: toRem(110);
+				letter-spacing: toRem(8);
+			}
+			@media(max-width: toEm(400)) {
+				left: toRem(100);
+				letter-spacing: toRem(5);
+				font-size: toRem(16);
+			}
+			@media(max-width: toEm(360)) {
+				top: toRem(30);
+				left: toRem(80);
+				letter-spacing: toRem(5);
+				font-size: toRem(16);
+			}
+			@media(max-width: toEm(340)) {
+				top: toRem(27);
+				left: toRem(80);
+				letter-spacing: toRem(4);
+				font-size: toRem(14);
+			}
+		}
+	}
+
+	& p {
+		text-transform: lowercase;
+		max-width: toRem(400);
+		text-align: right;
+		font-size: toRem(25);
+		margin-bottom: toRem(15, 25);
+		line-height: 145%;
+		font-family: 'BauhausMediumC';
+		font-weight: 500;
+		padding: toRem(15);
+		background-color: #f5e9e993;
+		position: absolute;
+		z-index: 2;
+		top:  toRem(350);
+		right: toRem(400);
+		box-shadow: toRem(4) toRem(4) toRem(10) rgba(1, 1, 1, 0.5);
+		@media(max-width: toEm(1200)) {
+			text-align: center;		 
+			top:  toRem(300);
+			right: toRem(330);
+		}
+		@media(max-width: toEm(1055)) {	 
+			top:  toRem(270);
+			right: toRem(320);
+			font-size: toRem(20);
+		}
+		@media(max-width: toEm(992)) {	 
+			top:  toRem(240);
+			right: toRem(260);
+			font-size: toRem(20);
+		}
+		@media(max-width: toEm(800)) {	 
+			top:  toRem(220);
+			right: toRem(190);
+
+		}
+		@media(max-width: toEm(767)) {	 
+			top:  toRem(170);
+			right: toRem(190);
+
+		}
+		@media(max-width: toEm(615)) {	 
+			top:  toRem(160);
+			right: toRem(70);
+	
+		}
+		@media(max-width: toEm(495)) {	 
+			top:  toRem(160);
+			right: toRem(20);
+			font-size: toRem(16);
+		}
+		@media(max-width: toEm(445)) {	 
+			top:  toRem(130);
+			right: toRem(20);
+			font-size: toRem(16);
+			padding:  toRem(5) toRem(0);
+			max-width: toRem(320);
+		}
+		@media(max-width: toEm(392)) {	 
+			top:  toRem(115);
+			right: toRem(20);
+			font-size: toRem(14);
+			padding:  toRem(5) toRem(0);
+			max-width: toRem(272);
+		}
+		@media(max-width: toEm(365)) {	 
+			top:  toRem(100);
+			right: toRem(20);
+			font-size: toRem(14);
+			padding:  toRem(5) toRem(0);
+			max-width: toRem(272);
+		}
+	}
+
+		&__foto img{			
+			background-image: url(../img/крохи.webp);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;	
+			filter:drop-shadow(toRem(4) toRem(4) toRem(10) rgba(1, 1, 1, 0.5));
+
+			position: absolute;
+			z-index: 1;
+			top: toRem(0);
+			left: toRem(-400);
+			width: 100%;
+			height: 100%;
+			aspect-ratio: 550 / 150;
+			object-fit: contain;
+			transition: 1s;
+			cursor: pointer;
+			
+			@media(max-width: toEm(1200)) {
+				aspect-ratio: 250 / 100;
+				top: toRem(0);
+				left: toRem(-300);
+			}
+			@media(max-width: toEm(1055)) {
+				aspect-ratio: 250 / 80;
+				top: toRem(0);
+				left: toRem(-200);
+			}
+			@media(max-width: toEm(825)) {
+				aspect-ratio: 230 / 80;
+				top: toRem(0);
+				left: toRem(100);
+			}
+			@media(max-width: toEm(620)) {
+				aspect-ratio: 200 / 80;
+				top: toRem(20);
+				left: toRem(-50);
+			}
+			@media(max-width: toEm(500)) {
+				aspect-ratio: 300 / 50;
+				top: toRem(0);
+				left: toRem(0);
+			}
+			@media(max-width: toEm(500)) {
+				aspect-ratio: 300 / 20;
+				top: toRem(0);
+				left: toRem(0);
+			}
+					@media (any-hover: hover) {
+					&:hover {
+						transform: scale(1.001);
+					}
+				}		
+		}
+} 
+
+
+//----------------------------------------------------------
+.two {
+	background-image: url(../img/0002.webp), url(../img/крохи.webp);
+	background-repeat: no-repeat;
+	background-position: toRem(80) toRem(40);
+	background-size: contain;
+	@media(max-width: toEm(767)) {
+		background-position: toRem(30) toRem(0);
+	}
+	@media(max-width: toEm(580)) {
+		background-position: toRem(-30) toRem(0);
+	}
+
+	position: relative;
+	padding: toRem(80) toRem(0) toRem(80);
+	@media(max-width: toEm(1300)) {
+		padding: toRem(40) toRem(0) toRem(40);
+	}
+	@media(max-width: toEm(500)) {
+		padding: toRem(30) toRem(0) toRem(30);
+	}
+	@media(max-width: toEm(340)) {
+		padding: toRem(15) toRem(0);
+	}
+	// .two__container
+	&__container {
+		display: grid;			// пишемо 'ДЛЯ ВИРІВНЮВАННЯ КОНТЕНТУ' у картці право-центр-ліво
+	}
+
+	// .two__items
+	&__items {
+		position: relative;
+		padding: toRem(50);
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		column-gap: 25;
+		row-gap: 40;
+	}
+
+	// .two__item
+	&__item {
+		&:nth-child(6) {
+			text-shadow: toRem(15) toRem(15) toRem(55) #0000;
+			position: absolute;
+			top: 40%;
+			right: 0;
+			font-size: toRem(50);
+			margin-bottom: toEm(10, 50);
+			letter-spacing: toRem(5);
+			line-height: 130%;
+			font-family: 'BauhausMediumC';
+			font-weight: 600;
+			grid-column-start: 5;
+			grid-column-end: 8;
+			@media(max-width: toEm(1040)) {
+				top: 30%;
+				right: 0;
+				grid-column-start: 4;
+				grid-column-end: 8;
+			}
+			@media(max-width: toEm(815)) {
+				grid-column-start: 3;
+				grid-column-end: 8;
+			}
+			@media(max-width: toEm(695)) {
+				top: 40%;
+				right: 0;
+				font-size: toRem(30);
+			}
+			@media(max-width: toEm(555)) {
+				grid-column-start: 2;
+				grid-column-end: 8;
+			}
+			@media(max-width: toEm(435)) {
+				font-size: toRem(20);
+				grid-column-start: 1;
+				grid-column-end: 8;
+				top: 40%;
+				right: 0;
+				letter-spacing: toRem(2);
+			}
+			@media(max-width: toEm(380)) {
+				font-size: toRem(18);
+				letter-spacing: toRem(2);
+			}
+					}
+	}
+	&__item img {
+		width: 100%;
+		height: 100%;
+		aspect-ratio: 250 / 270;
+		object-fit: contain;
+		@media(max-width: toEm(380)) {
+			aspect-ratio: 250 / 470;
+		}
+	}
+
+	&__text {
+		& > *:last-child {
+			margin-bottom: toEm(0);
+		}
+		background-color: #fdefefad;
+		max-width: toRem(750);
+		font-family: 'BauhausMediumC';
+		font-weight: 600;
+		font-size: toRem(20);
+		line-height: 135%;
+		letter-spacing: toRem(5);
+		padding: toRem(20);
+		text-align: right;
+		justify-self: end;			// пишемо 'ДЛЯ ВИРІВНЮВАННЯ КОНТЕНТУ' у картці право-центр-ліво
+		& span {
+			font-weight: 600;
+			color: #454747;
+		}
+		@media(max-width: toEm(580)) {
+			font-size: toRem(16);
+			max-width: toRem(700);
+			text-align: center;
+		}
+		& p  {
+			margin-bottom: toEm(30);
+		
+		@media(max-width: toEm(420)) {
+			margin-bottom: toEm(15);
+				}
+			}
+		}
+}
+
+
+
+//------------------------------------------------------------------
+.three {
+	padding: toRem(100) toRem(0);
+	@media(max-width: toEm(767)) {
+		padding: toRem(30) toRem(0);
+	}
+
+	&__container {
+		& h2 {
+			font-size: toRem(55);
+			margin-bottom: toEm(55, 55);
+			font-family: 'BauhausMediumC';
+			font-weight: 500;
+			text-align: center;
+			@media(max-width: toEm(400)) {
+				font-size: toRem(35);
+				margin-bottom: toEm(20, 25);
+			}
+		}
+	}
+	// .three__cards
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: toRem(15);
+		row-gap: toRem(30);
+		@media(max-width: toEm(1300)) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media(max-width: toEm(767)) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	// .three__item
+	&__item {
+		background-image: url(../img/крохи.webp);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		filter:drop-shadow(toRem(4) toRem(4) toRem(10) rgba(1, 1, 1, 0.5));
+	}
+
+	// .three__img
+	&__img img {
+		width: 100%;
+		height: 100%;
+		aspect-ratio: 400 / 300;
+		transition: 1s;
+		margin-bottom: toEm(125);
+		&:hover {
+			transform: translateX(toRem(20));
+		}
+		@media(max-width: toEm(992)) {
+			margin-bottom: toEm(85);
+		}
+		@media(max-width: toEm(650)) {
+			margin-bottom: toEm(50);
+		}
+		@media(max-width: toEm(400)) {
+			margin-bottom: toEm(35);
+		}
+	}
+
+	// .three__text
+	&__text {
+		text-align: center;
+		font-family: 'BauhausMediumC';
+		& > *:last-child {
+			margin-bottom: toEm(0);
+		}
+
+	}
+
+	// .three__title
+	&__title {
+		text-transform: uppercase;
+		font-size: toRem(40);
+		margin-bottom: toEm(15, 40);
+		font-weight: 500;
+	}
+
+	// .three__sub-title
+	&__sub-title {
+		font-size: toRem(25);
+		margin-bottom: toEm(35, 25);
+		font-weight: 500;
+	}
+
+	// .three__button
+	&__button {
+		padding: toRem(15) toRem(35);
+		font-size: toRem(20);
+		margin-bottom: toRem(10);
+		background-color: #22f5ea;
+		display: inline-block;
+		border: toRem(1) solid transparent;
+		transition: 0.5s;
+		&:hover {
+			background-color: transparent;
+			border: toRem(1) solid #22f5ea;
+		}
+	}
+}
+
+
+
+//--------------------------------------------------------------
+.for {
+	padding: toRem(120) toRem(0);
+	background: url(../img/клубника.webp), url(../img/крохи.webp), #fff;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: right bottom;
+
+	&--2 {
+		padding: toRem(20) toRem(0) toRem(20);
+		background: url(../img/клубника.webp);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
+	@media(max-width: toEm(420)) {
+		padding: toRem(30) toRem(0);
+	}
+	// .for__container
+	&__container {
+		text-shadow: (toRem(4) toRem(4) toRem(10) rgba(1, 1, 1, 0.5));
+		color: #22f5ea;
+		text-align: center;
+		& h2 {
+			font-size: toRem(120);
+			margin-bottom: toEm(30, 120);
+			line-height: 150%;
+			font-family: 'BauhausMediumC';
+			font-weight: 500;
+			@media(max-width: toEm(1200)) {
+				font-size: toRem(90);
+			}
+			@media(max-width: toEm(992)) {
+				font-size: toRem(70);
+			}
+			@media(max-width: toEm(730)) {
+				font-size: toRem(50);
+			}
+			@media(max-width: toEm(400)) {
+				font-size: toRem(30);
+			}
+		}
+		& h3 {
+			font-size: toRem(50);
+			margin-bottom: toEm(30, 120);
+			line-height: 150%;
+			font-family: 'BauhausMediumC';
+			font-weight: 500;
+			@media(max-width: toEm(730)) {
+				font-size: toRem(30);
+			}
+			@media(max-width: toEm(400)) {
+				font-size: toRem(20);
+			}
+		}
+	}
+}
+
+
+
+//-----------------------------------------------------------------
+.fight {
+	padding: toRem(130) toRem(0) toRem(30);
+	@media(max-width: toEm(767)) {
+		padding: toRem(80) toRem(0) toRem(40);
+	}
+	@media(max-width: toEm(540)) {
+		padding: toRem(50) toRem(0) toRem(30);
+	}
+	@media(max-width: toEm(420)) {
+		padding: toRem(30) toRem(0) toRem(10);
+	}
+	// .fight__container
+	&__container {
+		& h2 {
+			font-size: toRem(55);
+			margin-bottom: toEm(65, 55);
+			font-family: 'BauhausMediumC';
+			font-weight: 500;
+			text-align: center;
+			@media(max-width: toEm(400)) {
+				font-size: toRem(35);
+				margin-bottom: toEm(20, 25);
+			}
+		}
+	}
+
+	// .fight__cards
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: toRem(25);
+		row-gap: toRem(15);
+		@media(max-width: toEm(1000)) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		@media(max-width: toEm(400)) {
+			row-gap: toRem(10);
+		}
+		background-image: url(../img/крохи.webp);
+		background-repeat: no-repeat;
+		background-position: left toRem(0) top toRem(0);
+		background-size: cover;
+		filter:drop-shadow(toRem(4) toRem(4) toRem(10) rgba(1, 1, 1, 0.5));
+	}
+
+	// .fight__item
+	&__item {
+		& > *:last-child {
+			margin-bottom: toEm(0);
+		}
+		padding: toRem(15);
+	}
+
+	// .fight__img
+	&__img {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: toRem(5);
+		margin-bottom: toEm(45);
+	}
+	&__img img {
+		width: 100%;
+		height: 100%;
+		aspect-ratio: 5 / 5;
+		object-fit: contain;
+		padding: toRem(5);
+	}
+
+	// .fight__title
+	&__title {		
+		& > *:last-child {
+			margin-bottom: toEm(0);
+		}
+		@media(max-width: toEm(400)) {
+			font-size: toRem(16);
+		}
+		line-height: 130%;
+		font-size: toRem(20);
+		margin-bottom: toEm(20, 20);
+		&--1 {
+			text-align: center;
+			& span {
+				font-weight: 800;
+				color: #22f5ea;
+				font-size: toRem(25);
+			}
+		}
+	}
+	& p {
+		margin-bottom: toEm(25);
+	}
+
+
+	.fight-region {
+		padding: toRem(50) toRem(0) toRem(0);
+		background-image: url(../img/крохи.webp);
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: contain;
+		filter:drop-shadow(toRem(4) toRem(4) toRem(10) rgba(1, 1, 1, 0.5));
+
+		// .fight-region__list
+		&__list {
+			& > *:last-child {
+				margin-bottom: toEm(0);
+			}
+			margin-bottom: toEm(50);
+			@media(max-width: toEm(400)) {
+				margin-bottom: toEm(40);
+			}
+		}
+
+		// .fight-region__link
+		&__link {
+			& > *:last-child {
+				margin-bottom: toEm(0);
+			}
+			font-family: "BauhausMediumC";
+			font-weight: 500;
+			line-height: 135%;
+			font-size: toRem(20);
+			margin-bottom: toEm(15, 20);
+			display: flex;
+			gap: toRem(15);
+			&::before {
+				content: "";
+				display: inline-block;
+				width: toRem(6);
+				height: toRem(6);
+				flex: 0 0 toRem(6);
+				background-color: #22f5ea;
+				transform: translateY(toRem(11));
+			}
+			@media(max-width: toEm(400)) {
+				font-size: toRem(18);
+			}
+		}
+		& h3 {
+			font-size: toRem(20);
+			margin-bottom: toEm(20, 20);
+			font-family: "BauhausMediumC";
+			font-weight: 600;
+			line-height: 135%;
+		}
+}
+}
+//-----------------------------------------------------------------------
+.ideal {
+	padding: toRem(80) toRem(0) toRem( 50);
+
+	// .ideal__container
+
+	&__container {
+		& h2 {
+			text-align: center;
+			font-size: toRem(40);
+			margin-bottom: toEm(45, 40);
+			font-family: 'BauhausMediumC';
+			font-weight: 500;
+			letter-spacing: toRem(2);
+		}
+		@media(max-width: toEm(540)) {
+			font-size: toRem(25);
+		}
+		@media(max-width: toEm(420)) {
+			font-size: toRem(20);
+		}
+	}
+
+	// .ideal__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: toRem(30);
+		@media(max-width: toEm(992)) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: toRem(25);
+		}
+		@media(max-width: toEm(767)) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: toRem(15);
+		}
+	}
+
+	// .ideal__item
+	&__item {
+		& > *:last-child {
+			margin-bottom: toRem(0);
+		}
+	}
+
+	// .ideal__foto
+	&__foto img {
+		width: 100%;
+		height: 100%;
+		aspect-ratio: 50 / 20;
+		object-fit: contain;
+		margin-bottom: toEm(30);
+		background-color: #ffffff;
+		padding: toRem(10);
+	}
+
+	// .ideal__description
+	&__description {
+		font-size: toRem(25);
+		text-transform: uppercase;
+		color: #5C3D32;
+		line-height: toRem(1.2);
+		font-weight: 700;
+		text-align: center;
+		line-height: 125%;
+		background-color: #ffffff;
+		padding: toRem(5);
+		@media(max-width: toEm(1145)) {
+			font-size: toRem(20);
+		}
+		@media(max-width: toEm(375)) {
+			font-size: toRem(18);
+		}
+	}
+}

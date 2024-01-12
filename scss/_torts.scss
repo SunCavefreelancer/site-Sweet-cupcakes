@@ -1,0 +1,119 @@
+//------------------------------torts------------------------------
+.torts {
+	padding: toRem(150) toRem(10) toRem(50);
+		@media(max-width: toEm(960)) {
+			padding: toRem(70) toRem(10) toRem(100);
+	}
+
+	// .torts__card
+	&__card {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: toRem(15);
+		@media(max-width: toEm(1250)) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media(max-width: toEm(960)) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media(max-width: toEm(767)) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	// .torts__item
+	&__item {
+		background-color: #edebea60;
+		border-radius: toRem(25);
+		padding: toRem(20);
+		text-align: center;
+		font-family: "Calligraph";
+	
+		display: flex;
+		flex-direction: column;
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+		& h2 {
+			font-family: "Calligraph";
+			font-size: toRem(35);
+			margin-bottom: toEm(20, 35);
+		}
+	}
+
+
+	
+	// .torts__img
+	&__img {
+		overflow: hidden;	
+	}
+	&__img img {
+		width: 100%;
+		height: 100%;
+		aspect-ratio: 300 / 250;
+		object-fit: contain;
+		transition: 0.4s;
+		transform: translateY(1.001);
+		margin-bottom: toEm(15);
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	// .torts__title
+	&__title {
+		font-size: toRem(22);
+		color: #2c2626;
+		line-height: 135%;
+		text-align: left;
+		margin-bottom: toEm(20, 22);
+		font-family: "Calligraph";
+		
+		flex-grow: 1;
+	}
+
+	// .torts__price
+	&__price {
+		font-size: toRem(25);
+		color: #eb0b0b;
+		font-weight: 600;
+		margin-bottom: toEm(15, 25);
+	}
+
+	// .torts__quantity
+	&__quantity {
+		font-size: toRem(25);
+		color: #402525;
+		font-weight: 600;
+		margin-bottom: toEm(10, 25);
+	}
+
+	// .torts__button
+	&__button {
+		padding: toRem(15) toRem(23);
+		background-color: aquamarine;
+		display: inline-block;
+		border-radius: toRem(10);
+		color: #fff;
+		font-family: "Inter";
+		font-weight: 600;
+		text-shadow: toRem(1) toRem(2) toRem(2) #000;
+		border: toRem(1) solid transparent;
+		transition: 0.4s;
+		&:hover {
+			background-color: rgb(244, 255, 251);
+			color: rgb(255, 10, 59);
+			border: toRem(1) solid rgb(255, 10, 59);
+			font-weight: 600;
+			text-shadow: toRem(1) toRem(2) toRem(2) #000;
+		}
+	}
+
+	// .torts__description
+	&__description {
+		display: flex;
+		justify-content: space-between;
+		letter-spacing: toRem(2);
+	}
+}
+

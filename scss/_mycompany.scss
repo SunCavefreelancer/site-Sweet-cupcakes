@@ -1,0 +1,226 @@
+//--------------КОМНПАНІЯ----------my company----------------------------
+/* .aboutus {} */
+
+.up {
+	background-color: #fdf5f0c4;
+	padding: toRem(150) toRem(15) toRem(30);
+	@media(max-width: toEm(460)) {
+		padding: toRem(80) toRem(15) toRem(10);
+	}
+		// .up__list
+		&__list {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: toRem(15);
+			max-width: toRem(420);
+			@media(max-width: toEm(460)) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+		// .up__link
+		&__link {
+			font-family: 'BauhausMediumC';
+			font-size: toRem(18);
+			line-height: 130%;
+			color: #000;
+			animation: text 1s  0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+			& span {
+				font-weight: 600;
+				text-decoration: underline;
+			}
+			display: flex;
+			gap: toRem(7);
+			&::before {
+				content: '';
+				width: toRem(5);
+				height: toRem(5);
+				flex: 0 0 toRem(5);
+				background-color: aquamarine;
+				transform: translateY(toRem(7));
+			}
+		}
+
+		// .up__a
+		&__a {
+			font-size: toRem(20);
+			font-weight: 600;
+			color: red;
+			transition: 0.4s;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+}
+//-----------
+
+		.aboutus {
+			& > *:last-child {
+				margin-bottom: toEm(0);
+			}
+			& h2, h3 {
+				font-size: toRem(32);
+				margin-bottom: toEm(15, 35);
+				font-family: 'BauhausMediumC';
+				font-weight: 500;
+				animation: text 1s  0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+				letter-spacing: toRem(2);
+				@media(max-width: toEm(540)) {
+					font-size: toRem(25);
+				}
+				& span {
+					color:rgb(0, 255, 213);
+					font-weight: 600;
+					line-height: 130%;
+				}
+			}
+			& p {
+				font-size: toRem(18);
+				margin-bottom: toEm(15, 18);
+				animation: text 1s  0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+				@media(max-width: toEm(540)) {
+					font-size: toRem(16);
+				}
+				& span {
+					color:rgb(0, 255, 213);
+					font-weight: 600;
+					text-shadow: toRem(2) toRem(0) toRem(2) #025667;
+				}
+				& > *:last-child {
+					margin-bottom: toEm(0);
+				}
+			}
+
+				// .aboutus__text
+					&__text {
+					padding: toRem(50) toRem(0) toRem(5);
+					line-height: 165%;
+					font-family: "Inter";
+					@media(max-width: toEm(460)) {
+						padding: toRem(30) toRem(0) toRem(5);
+					}
+				}
+					//___title
+					&___title {
+						display: grid;
+						grid-template-columns: repeat(2, 1fr);
+						column-gap: toRem(15);
+						margin-bottom: toEm(30);
+						@media(max-width: toEm(1200)) {
+							grid-template-columns: repeat(1, 1fr);
+							column-gap: toRem(10);
+							margin-bottom: toEm(10);
+						}
+						& > *:last-child {
+							margin-bottom: toRem(0);
+						}
+					}
+					//left
+					&__left {
+						background-image: url(../img/crumb.webp);
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: contain;
+						width: 100%;
+						height: 100%;
+						aspect-ratio: 200 / 50;
+						@media(max-width: toEm(767)) {
+							background-position: top center;
+						}
+						& > *:last-child {
+							margin-bottom: toRem(0);
+						}
+					}
+				//__right
+				&__right img {
+					width: 100%;
+					height: 100%;
+					aspect-ratio: 200 / 200;
+					object-fit: contain;
+					animation: 1s 0.8s linear slide-in-right;
+					background-image: url(../img/crumb.webp);
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: contain;
+					transition: 1s;
+					filter: drop-shadow(toRem(10) toRem(10) toRem(20) rgb(231, 218, 218));
+					&:hover{
+						transform: translateX(toRem(35));
+					}
+					@media(max-width: toEm(1200)) {
+						aspect-ratio: 50 / 20;
+					}
+				}
+
+
+				// down
+				.aboutus {
+					& > *:last-child {
+						margin-bottom: toRem(0);
+					}
+					// .aboutus__why
+					&__why {
+						padding: toRem(10) toRem(0) toRem(25);
+						font-family: 'BauhausMediumC';
+						font-weight: 500;
+					}
+			
+					// .aboutus__items
+					&__items {
+						display: grid;
+						grid-template-columns: repeat(3, 1fr);
+						gap: toRem(30);
+						@media(max-width: toEm(992)) {
+							grid-template-columns: repeat(2, 1fr);
+							gap: toRem(25);
+						}
+						@media(max-width: toEm(767)) {
+							grid-template-columns: repeat(1, 1fr);
+							gap: toRem(15);
+						}
+					}
+			
+					// .aboutus__item
+					&__item {
+						& > *:last-child {
+							margin-bottom: toRem(0);
+						}
+					}
+			
+					// .aboutus__foto
+					&__foto img {
+						width: 100%;
+						height: 100%;
+						aspect-ratio: 50 / 20;
+						object-fit: contain;
+						margin-bottom: toEm(30);
+						background-color: #ffffff;
+						padding: toRem(5);
+					}
+			
+					// .aboutus__description
+					&__description {
+						font-size: toRem(25);
+						text-transform: uppercase;
+						color: #5C3D32;
+						line-height: toRem(1.2);
+						font-weight: 700;
+						text-align: center;
+						line-height: 125%;
+						background-color: #ffffff;
+						padding: toRem(5);
+						@media(max-width: toEm(1145)) {
+							font-size: toRem(20);
+						}
+						@media(max-width: toEm(375)) {
+							font-size: toRem(18);
+						}
+					}
+			}
+			
+	}
+	
+

@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,400,500,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Macondo:regular&display=swap");
+/* ======Підключення вручну======= */
+/* Шрифт № 1 */
+@font-face {
+	font-family: "Calligraph";
+	src:
+		url("..//fonts/Calligraph.woff2") format("woff2"),
+		url("..//fonts/Calligraph.woff") format("woff");
+	wont-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Шрифт № 2 */
+@font-face {
+	font-family: "MullerRegular";
+	src:
+		url("..//fonts/MullerRegular.woff2") format("woff2"),
+		url("..//fonts/MullerRegular.woff") format("woff");
+	wont-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+
+/* Шрифт № 3 */
+@font-face {
+	font-family: "BauhausMediumC";
+	src:
+		url("..//fonts/BauhausMediumC.woff2") format("woff2"),
+		url("..//fonts/BauhausMediumC.woff") format("woff");
+	wont-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}

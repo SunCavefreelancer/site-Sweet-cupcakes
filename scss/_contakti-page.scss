@@ -1,0 +1,142 @@
+//---------------------------------------контакти---сторінка--------
+.contakti-up {
+	padding: toRem(150) toRem(15) toRem(30);
+	@media (max-width: toEm(460)) {
+		padding: toRem(100) toRem(15) toRem(10);
+	}
+
+	// .contakti-up__list
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: toRem(15);
+		max-width: toRem(420);
+		margin-bottom: toEm(10);
+		@media (max-width: toEm(460)) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	// .contakti-up__link
+	&__link {
+		font-family: "BauhausMediumC";
+		font-size: toRem(18);
+		line-height: 130%;
+		color: #000;
+		& span {
+			font-weight: 600;
+			text-decoration: underline;
+		}
+		display: flex;
+		gap: toRem(7);
+		&::before {
+			content: "";
+			width: toRem(5);
+			height: toRem(5);
+			flex: 0 0 toRem(5);
+			background-color: aquamarine;
+			transform: translateY(toRem(7));
+		}
+	}
+
+	// .contakti-up__a
+	&__a {
+		font-size: toRem(20);
+		font-weight: 600;
+		color: red;
+		transition: 0.4s;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+//----------
+.contakti {
+	//body
+	&__body {
+		padding: toRem(40) toRem(0) toRem(30);
+		@media (max-width: toEm(460)) {
+			padding: toRem(30) toRem(0) toRem(5);
+		}
+	}
+	// .contakti__text
+	&__text {
+		display: grid;
+		gap: toRem(15);
+		& > *:last-child {
+			margin-bottom: toEm(0);
+		}
+		& h2 {
+			font-family: 'BauhausMediumC';
+			font-weight: 500;
+			font-size: toRem(35);
+			margin-bottom: toEm(10, 35);
+			animation: text 1s  0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+		}
+		& h4 {
+			font-size: toRem(20);
+			font-weight: 600;
+			animation: text 1s  0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+		}
+		& span {
+			font-weight: 600;
+			animation: text 1s  0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+		}
+	}
+
+	// .contakti__link
+	&__link {
+		font-family: "Inter";
+		font-size: toRem(16);
+		margin-bottom: toEm(15, 16);
+	}
+
+	// .contakti__mail
+	&__mail {
+		font-family: "Inter";
+		font-size: toRem(16);
+		margin-bottom: toEm(20, 20);
+		line-height: 135%;
+		animation: text 1s  0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+		& span {
+			font-weight: 600;
+			font-style: toRem(18);
+			text-transform: uppercase;
+			animation: text 1s  0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+		}
+	}
+
+	// .contakti__adress
+	&__adress {
+		font-family: "Inter";
+		font-size: toRem(20);
+		margin-bottom: toEm(15, 25);
+		& h3 {
+			font-size: toRem(20);
+			margin-bottom: toEm(20, 20);
+			font-weight: 600;
+			animation: text 1s  0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+		}
+		& p {
+			font-size: toRem(18);
+			margin-bottom: toEm(20);
+			animation: text 1s  0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+		}
+	}
+
+	// .contakti__map
+	&__map img {
+		width: 100%;
+		height: 100%;
+		aspect-ratio: 750 / 500;
+		object-fit: cover;
+	}
+}
