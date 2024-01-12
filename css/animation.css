@@ -1,0 +1,159 @@
+/* ---------------------ANIMATIONS----------------------- */
+
+/* анімація 1 */
+@keyframes transform { /* створили сценарій */
+	0% {
+		transform: translate(20px);
+	}
+	100% {
+		transform: translate(520px);
+	}
+}
+
+
+/* анімація 2 */
+@keyframes scale { /* створили сценарій */
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(4.5);
+	}
+}
+
+/* анімація 3 ---тут застосований один сценарій---*/
+@keyframes scaleAndTranslateX { /* створили сценарій */
+	0% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(10);
+	  }
+	100% {
+		transform: translateX(1920px) /* луна сховається за межі екрану 1920рх  */ scale(14)/* лунеа збільшиться до 14 одиниць */;
+	}
+}
+
+
+
+// ---------------------ANIMATIONS--4---------------------
+@keyframes text { /* створили сценарій */
+	0% {
+		opacity: 0;
+		transform: translate(0px 10%) rotate(10deg);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0px 0) rotate(-20deg);
+	}
+}
+
+
+//-------------------------------------------------------------5
+@keyframes rotate {
+	0% {
+	  transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
+	}
+	5% {
+	  transform: rotateX(-20deg) rotateY(-20deg) rotateZ(0deg);
+	}
+	20% {
+	  transform: rotateX(30deg) rotateY(200deg) rotateZ(0deg);
+	}
+	25% {
+	  transform: rotateX(-60deg) rotateY(150deg) rotateZ(0deg);
+	}
+	60% {
+	  transform: rotateX(-20deg) rotateY(130deg) rotateZ(0deg);
+	}
+	65% {
+	  transform: rotateX(-20deg) rotateY(120deg) rotateZ(0deg);
+	}
+	80% {
+	  transform: rotateX(-20deg) rotateY(375deg) rotateZ(0deg);
+	}
+	85% {
+	  transform: rotateX(-20deg) rotateY(357deg) rotateZ(0deg);
+	}
+	87% {
+	  transform: rotateX(-20deg) rotateY(360deg) rotateZ(0deg);
+	}
+	100% {
+	  transform: rotateX(-20deg) rotateY(360deg) rotateZ(0deg);
+	}
+  }
+
+
+  //---------------------------анимация в плоскости-------------------------------6
+  @keyframes shadow {
+	0% {
+	  transform: rotateX(80deg) rotateY(0deg) rotateZ(0deg);
+	  box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
+	}
+	5% {
+	  transform: rotateX(80deg) rotateY(10deg) rotateZ(0deg);
+	  box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
+	}
+	20% {
+	  transform: rotateX(30deg) rotateY(-20deg) rotateZ(-20deg);
+	  box-shadow: 0 0 50px 30px rgba(0,0,0,0.3);
+	}
+	25% {
+	  transform: rotateX(80deg) rotateY(-20deg) rotateZ(50deg);
+	  box-shadow: 0 0 35px 15px rgba(0,0,0,0.1);
+	}
+	60% {
+	  transform: rotateX(80deg) rotateY(0deg) rotateZ(-50deg) translateX(30px);
+	  box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
+	}
+	100% {
+	  box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
+	}
+  }
+
+  //--------------------анимация wawes---------------------------7
+  @keyframes waves {
+	0% {
+	  transform: scale(1);
+	  opacity: 1;
+	}
+  
+	50% {
+	  opacity: 1;
+	}
+  
+	100% {
+	  transform: scale(2);
+	  opacity: 0;
+	}
+  }
+
+
+/* ---------для блока .box------------ */
+.box__image {
+	width: 50px; /* щоб задати ширину та висоту блоку */
+	height: 50px;/* щоб задати ширину та висоту блоку */
+	position: relative; /* для анімації */
+
+	animation-name: scaleAndTranslateX; /* приєднали сценарій */
+	animation-delay: 0,5s; /* затримка анімації */
+	animation-duration: 15s; /* встановили час тривалості сценарію */
+	animation-timing-function: linear;/* плавність */
+	animation-iteration-count: 1;/* infinite -нескінченне */ /* або 1, 2, 3... */  /* кіл-сть повторень анімації */
+	animation-direction: alternate /* reverse */ /* alternate-reverse */; /* напрямок анімації - ця в зворотньому */
+	/*animation-play-state: running; /* запустили - це за замовченням, а при hover:paused, none; */ 
+	animation-fill-mode: forwards /* у кінцевому положенні*/ /* backwards - у початковому положенні */;
+}	
+
+
+//------------------------------------- полоска с прозрачными краями---------------------------
+
+background: -moz-linear-gradient(left, rgba(30,87,153,0) 0%, rgb(0, 255, 213,0.02) 1%, rgba(0,0,0,1) 50%, rgba(30,87,153,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(30,87,153,0)), color-stop(1%,rgba(30,87,153,0.02)), color-stop(50%,rgba(0,0,0,1)), color-stop(100%,rgba(30,87,153,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left, rgba(30,87,153,0) 0%,rgba(30,87,153,0.02) 1%,rgba(0,0,0,1) 50%,rgba(30,87,153,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, rgba(30,87,153,0) 0%,rgba(30,87,153,0.02) 1%,rgba(0,0,0,1) 50%,rgba(30,87,153,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left, rgba(30,87,153,0) 0%,rgba(30,87,153,0.02) 1%,rgba(0,0,0,1) 50%,rgba(30,87,153,0) 100%); /* IE10+ */
+background: linear-gradient(to right, rgba(30,87,153,0) 0%,rgba(30,87,153,0.02) 1%,rgba(0,0,0,1) 50%,rgba(30,87,153,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#001e5799',GradientType=1 ); /* IE6-9 */ 
+
+//------------------------------------- полоска с прозрачными краями---------------------------

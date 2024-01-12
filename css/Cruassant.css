@@ -1,0 +1,230 @@
+
+/* -------------------------------cruassant CARD------------------------------------- */
+.cruassant {
+	padding: 150px 10px 50px;
+}
+@media(max-width: 960px) {
+	.cruassant {
+		padding: 70px 10px 100px;
+	}
+}
+
+.cruassant--2 {
+	padding: 0px 10px 50px;
+}
+@media(max-width: 960px) {
+	.cruassant--2 {
+		padding: 40px 10px 50px;
+	}
+}
+
+
+.cruassant__card {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 15px;
+}
+@media(max-width:1200px) {
+	.cruassant__card  {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media(max-width:992px) {
+	.cruassant__card  {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media(max-width:767px) {
+	.cruassant__card  {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+.cruassant__item {
+	background-color: #edebea60;
+	border-radius: 25px;
+	padding: 20px;
+	text-align: center;
+	font-family: "Calligraph";
+
+	display: flex;
+	flex-direction: column;
+}
+.cruassant__item > *:last-child {
+	margin-bottom: 0px;
+}
+.cruassant__item h2 {
+	font-family: "Calligraph";
+	font-size: 35px;
+	margin-bottom: 20px;
+}
+
+.cruassant__img {
+	overflow: hidden;
+}
+.cruassant__img img {
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 170 / 100;
+	object-fit: cover;
+	margin-bottom: 15px;
+	transition: 0.4s;
+}
+.cruassant__img img:hover {
+	transform: scale(1.1);
+}
+
+.cruassant__title {
+	font-size: 22px;
+	color: #2c2626;
+	line-height: 135%;
+	text-align: left;
+	margin-bottom: 20px;
+	font-family: "Calligraph";
+	
+	flex-grow: 1;
+}
+
+.cruassant__description {
+	display: flex;
+	justify-content: space-between;
+	letter-spacing: 2px;
+}
+.cruassant__price {
+	font-size: 25px;
+	color: #eb0b0b;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+
+.cruassant__quantity {
+	font-size: 25px;
+	color: #402525;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.cruassant__button {
+	padding: 15px 23px;
+	background-color: aquamarine;
+	display: inline-block;
+	border-radius: 10px;
+	color: #fff;
+	font-family: "Inter";
+	font-weight: 600;
+	text-shadow: 1px 2px 2px #000;
+	border: 1px solid transparent;
+	transition: 0.4s;
+}
+.cruassant__button:hover {
+	background-color: rgb(244, 255, 251);
+	color: rgb(255, 10, 59);
+	border: 1px solid rgb(255, 10, 59);
+	font-weight: 600;
+	text-shadow: 1px 2px 2px #000;
+}
+
+
+
+/* ------------------------------slider----------------------------------------- */
+.slider {
+    margin: -20px 0px 50px 0px;
+	position: relative;
+	z-index: 1;
+}
+.slider--2 {
+	margin: 80px 0px 50px 0px;
+	padding: 20px;
+}
+@media (max-width:992px){
+	.slider {
+		margin: -80px 0px 0px 0px;
+	}
+	.slider--2 {
+		margin: 80px 0px 0px 0px;
+	}
+}
+@media (max-width:767px){
+	.slider  {
+		margin: -70px 0px 0px 0px;
+	}
+	.slider--2 {
+		margin: 50px 0px 0px 0px;
+	}
+}
+@media (max-width:320px){
+	.slider  {
+		margin: -50px 0px 0px 0px;
+	}
+	.slider--2 {
+		margin: 50px 0px 0px 0px;
+	}
+}
+
+
+.sliderbig__item img {
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 1240 / 210;
+	object-fit: contain;
+	border-radius: 25px;
+
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* Ограничивающая оболочка */
+.slick-list { /* что бы не выглядывал край соседней фотографии СБОКУ */
+    overflow: hidden;
+}
+/* --------------------------------------------------------------------------- */
+ 
+/* Лента слайдов */ /* что бы все фото выстроились в РЯД */
+.slick-track{
+    display: flex;
+} /* 1). уже работает СЛАЙДЕР, можно листать картинки */
+/* ---------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------- */
+/* Стилизуем кнопки - точки */
+/* Точки (булиты) */
+.sliderbig .slick-dots{		/* здесь они отключены */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sliderbig .slick-dots li{ /* растояние между кнопками-булитами */
+    list-style: none;
+    margin: 0px 10px;
+}
+.sliderbig .slick-dots button{
+    font-size: 0;
+    width: 15px; /* размер кнопки */
+    height: 15px; /* размер кнопки */
+    background-color: rgb(7, 238, 222);
+    border-radius: 50%; /* круглые кнопки */
+}
+.sliderbig .slick-dots li.slick-active button { /* делаем активную кнопку прозрачной */
+    background-color: transparent;
+    border: 2px solid #090909;
+}
+
+/* Здесь мы стилизуем для -КОНКРЕТНОГО СЛАДЙА- кнопки */
+
+/* Стрелка */  
+
+/* Стрелка ВЛЕВО*/ 
+
+/* Стрелка ВПРАВО*/ 
+
+/* --------------------------------------------------------------------------- */
+.sliderbig-item {
+    text-align: center;/* поставили ПО ЦЕНТРУ картинки */
+}
+/* тогда здесь пишем 1 фото будет не прозрачным */ /* и в js пишем: centerMode:true
+.sliderbig__item.slick-center {
+}*/
+
+/* ==============================================sliderFON================================================= */
+
+
